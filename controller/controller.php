@@ -3,7 +3,7 @@
 require_once('models/PostManager.php');
 require_once('models/CommentManager.php');
 
-function listPosts()
+function listPosts() //recuperation des chapitres
 {
     $postManager = new PostManager();
     $chapitres = $postManager->getChapitres();
@@ -16,12 +16,12 @@ function post($id){
     $commentManager = new CommentManager();
 
     $chapitre = $postManager->getChapitre($id);
-    $commentaires = $commentManager->getCommentaires($id);
+    $commentaires = $commentManager->getCommentaire($id);
     require('views/frontend/viewChapitres.php');
 
 }
 
-function adComment($text, $membrePseudo, $idChapter){// teste de text membrePseudo id teste des valeurs
+function adComment($text, $membrePseudo, $idChapter){
     $commentManager = new CommentManager();
     $commentaires = $commentManager->postComment($text, $membrePseudo, $idChapter);
 

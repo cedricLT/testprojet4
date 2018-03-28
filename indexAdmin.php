@@ -2,7 +2,7 @@
 require('controller/controllerAdmin.php');
 
 if (isset($_GET['action'])) {
-    if ($_GET['action'] == 'supprimer') {
+    if ($_GET['action'] == 'supprimer') {//supprimer chapitre
         $idChapitre = $_GET['id'];
         supprimer($idChapitre);
     }elseif (($_GET['action'] == 'adChapter')){
@@ -13,9 +13,9 @@ if (isset($_GET['action'])) {
     }elseif ($_GET['action'] == 'modifier'){
         $id = $_GET['id'];
         modifier($id);
-    }elseif ($_GET['action'] == 'editeur'){
+    }elseif ($_GET['action'] == 'editeur'){ // tinymce editer un nouveau chapitre
         editer();
-    }elseif ($_GET['action'] == 'nouvelModif'){
+    }elseif ($_GET['action'] == 'nouvelModif'){ // modifier un chapitre dejas existant
         $title = $_POST['title'];
         $text = $_POST['text'];
         $chapter_number = $_POST['chapter_number'];

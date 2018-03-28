@@ -5,7 +5,15 @@ require_once('models/model.php');
 
 class CommentManager extends Manager
 {
-    public function getCommentaires($id) // recuperation des commentaires
+    public function getCommentaires() // recuperation des commentaires
+    {
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('SELECT id, text, membrePseudo, dates FROM commentaire ORDER BY ID ');
+        $req->execute(array());
+
+        return $req;
+
+    } public function getCommentaire($id) // recuperation des commentaires
     {
         $bdd = $this->dbConnect();
         // Récupération des 10 derniers commmentaires

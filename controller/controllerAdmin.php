@@ -6,7 +6,10 @@ require_once('models/CommentManager.php');
 function tableauBord()
 {
     $postManager = new PostManager();
+    $commentManager = new CommentManager();
     $chapitres = $postManager->getChapitres();
+    $commentaires = $commentManager->getCommentaires();
+
     require('views/backend/viewTableauBord.php');
 }
 
