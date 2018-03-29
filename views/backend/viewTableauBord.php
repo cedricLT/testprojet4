@@ -12,12 +12,14 @@
             <div id="chapitres">
                 <h2>Chapitres</h2>
                 <ul>
-                    <?php
-                    while ($chapitre = $chapitres->fetch()) {
-                        ?>
-                    <li> <?= $chapitre['title'] ?> chapitre <?= $chapitre['chapter_number'] ?>
+
+                <?php while ($chapitre = $chapitres->fetch()) { ?>
+
+                    <li>
+                        <?= $chapitre['title'] ?> chapitre <?= $chapitre['chapter_number'] ?>
                         <a href="indexAdmin.php?action=supprimer&id=<?= $chapitre['id'] ?>">Supprimer</a>
                         <a href="indexAdmin.php?action=modifier&id=<?= $chapitre['id'] ?>">Modifier</a>
+                        <a href="indexAdmin.php?action=voirCommentaire&id=<?= $chapitre['id'] ?>">Voir les commentaires</a>
 
                     </li>
                     <?php
@@ -29,31 +31,6 @@
                 <div id="creatChapitres">
                     <a href="indexAdmin.php?action=editeur">Créer un nouveau chapitres</a>
                 </div>
-            </div>
-
-            <div id="commentaires">
-                <h2>Commentaire</h2>
-                <?php
-
-                while ($donnees = $commentaires->fetch())
-                {
-                    ?>
-
-                    <div class="news">
-                        <h3>
-                            <?= htmlspecialchars($donnees['membrePseudo']); ?>
-                            <em>le <?php echo $donnees['dates']; ?></em>
-                        </h3>
-
-                        <p>
-                            <?= nl2br(htmlspecialchars($donnees['text'])); // On affiche le contenu du commentaire?>
-                        </p>
-                    </div>
-                    <?php
-                }// Fin de la boucle des billets
-                $commentaires->closeCursor();
-                ?>
-
             </div>
         </div>
     </body>

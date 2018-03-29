@@ -4,20 +4,18 @@ require_once('models/model.php');
 
 class PostManager extends Manager
 {
-    public function getChapitres()
+    public function getChapitres() // Récupération des chapitres
     {
         $bdd = $this->dbConnect();
-        // Récupération des chapitres
         $req = $bdd->query('SELECT id, title, text, chapter_number, dates FROM chapitre ORDER BY ID ');
-
+        $req->execute(array());
         return $req;
 
     }
 
-    public function getChapitre($id)
+    public function getChapitre($id)// Récupération d un chapitre
     {
         $bdd = $this->dbConnect();
-        // Récupération d un chapitre
         $req = $bdd->prepare('SELECT id, title, text, chapter_number, dates FROM chapitre WHERE id = ?');
         $req->execute(array($id));
         return $req->fetch();
@@ -45,7 +43,7 @@ class PostManager extends Manager
         return $req;
     }
 
-    public function modificationChapitre($title, $text, $chapter_number, $id){
+    public function modificationChapitre($title, $text, $chapter_number, $id){ // modifier un chapitre
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('UPDATE chapitre SET title = ?, text = ?, chapter_number = ? where id = ?');
         $req->execute(array($title, $text, $chapter_number, $id));

@@ -13,10 +13,11 @@ class CommentManager extends Manager
 
         return $req;
 
-    } public function getCommentaire($id) // recuperation des commentaires
+    }
+
+    public function getCommentaire($id) // recuperation d'un commentaire
     {
         $bdd = $this->dbConnect();
-        // Récupération des 10 derniers commmentaires
         $req = $bdd->prepare('SELECT id, text, membrePseudo, dates, id_chapitre FROM commentaire WHERE id_chapitre = ? ORDER BY ID DESC LIMIT 0, 10');
         $req->execute(array($id));
 
@@ -35,7 +36,7 @@ class CommentManager extends Manager
 
     }
 
-    public function suprimeCommentaire($idChapitre)
+    public function suprimeCommentaire($idChapitre)//supprime les commentaire a la suppression d un chappitre
     {
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('DELETE FROM commentaire WHERE id_chapitre = ?');
@@ -43,4 +44,20 @@ class CommentManager extends Manager
         return $req;
     }
 
+    public function suprimeCommentaireAd($idDonnee) //supprimer un commentaire en admin
+    {
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('DELETE  FROM commentaire WHERE id = ? ');
+        $req->execute(array($idDonnee));
+        return $req;
+    }
+
+
+    public function voirCommentaireAd($idChapter){
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('SELECT id, text, membrePseudo, dates, id_chapitre FROM commentaire WHERE id_chapitre = ? ');
+        $req->execute(array($idChapter));
+
+        return $req;
+    }
 }

@@ -37,7 +37,7 @@ function modifier($id){
     require('views/backend/viewTinyMceAdmin.php');
 }
 
-function editer(){
+function editer(){ //tinyMce
     require ('views/backend/viewAdmin.php');
 }
 
@@ -46,4 +46,20 @@ function nouvelModif($title, $text, $chapter_number, $id){ //enregistrement d un
     $nouvelModif = $newsModif->modificationChapitre($title, $text, $chapter_number, $id);
     //require ('views/backend/viewTableauBord.php');
     header('Location: indexAdmin.php');
+}
+
+function supprimComment($idDonnee, $idChapter){ //supprimer un commentaire en admin
+    $supprimeCommentaire = new CommentManager();
+    $supprimeCommentaireAdmin = $supprimeCommentaire->suprimeCommentaireAd( $idDonnee);
+    header('Location: indexAdmin.php?action=voirCommentaire&id='.$idChapter);
+
+}
+
+
+function voirCommentaire($idChapter, $id){ // commentaires par chapitre
+    $voirComment = new CommentManager();
+    $postManager = new PostManager();
+    $voirCommentAd = $voirComment->voirCommentaireAd($idChapter);
+    $chapitres = $postManager->getChapitre($id);
+   require('views/backend/viewCommentaireAdmin.php');
 }
