@@ -60,4 +60,12 @@ class CommentManager extends Manager
 
         return $req;
     }
+
+    public function signalCommentaire($donnee){
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('UPDATE commentaire SET report=(report+1) WHERE id = ?');
+        $req->execute(array($donnee));
+
+        return $req;
+    }
 }

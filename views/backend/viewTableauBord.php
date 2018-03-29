@@ -32,6 +32,9 @@
                     <a href="indexAdmin.php?action=editeur">Créer un nouveau chapitres</a>
                 </div>
             </div>
+            <div id="commentaireSignalé">
+                <h1>Commentaires signalé</h1>
+            </div>
         </div>
     </body>
 </html>

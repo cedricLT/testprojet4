@@ -4,7 +4,7 @@ class Manager
 {
 
 
-   protected function dbConnect()
+    protected function dbConnect()
     {
 
         try {

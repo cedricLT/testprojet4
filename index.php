@@ -18,6 +18,11 @@ if (isset($_GET['action'])) {
         $membrePseudo = $_POST['membrePseudo'];
         $idChapter = $_GET['id'];
         adComment($text,$membrePseudo,$idChapter);
+    }elseif ($_GET['action'] == 'signaler'){
+            $donnee = $_GET['id'];
+            signaler($donnee);
+
+
     }
 }
 else {

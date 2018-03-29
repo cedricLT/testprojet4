@@ -41,6 +41,7 @@
                     ?>
 
                 </p>
+                <a href="index.php?action=signaler&id=<?= $donnees['id'] ?>">Signaler le commentaire</a>
             </div>
             <?php
         }// Fin de la boucle des billets
