@@ -28,8 +28,8 @@ function adComment($text, $membrePseudo, $idChapter){
     header('Location: index.php?action=post&id='.$idChapter);
 }
 
-function signaler($donnee){
+function signaler($donnee, $idChapter){
     $signalerComment = new CommentManager();
     $signalerCommentaire = $signalerComment->signalCommentaire($donnee);
-    header('Location: index.php?action=post&id=10');
+    header('Location:index.php?action=post&id='.$idChapter);
 }

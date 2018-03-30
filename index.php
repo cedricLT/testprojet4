@@ -20,9 +20,8 @@ if (isset($_GET['action'])) {
         adComment($text,$membrePseudo,$idChapter);
     }elseif ($_GET['action'] == 'signaler'){
             $donnee = $_GET['id'];
-            signaler($donnee);
-
-
+            $idChapter = $_GET['idPost'];
+            signaler($donnee, $idChapter);
     }
 }
 else {
