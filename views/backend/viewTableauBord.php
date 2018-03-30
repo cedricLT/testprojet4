@@ -34,6 +34,27 @@
             </div>
             <div id="commentaireSignalé">
                 <h1>Commentaires signalé</h1>
+                <div id="reportComment">
+                    <?php
+                    while ($donnees = $signalerCommentaire->fetch()){ ?>
+
+                    <h3>
+                    <?php echo htmlspecialchars($donnees['membrePseudo']); ?>
+                    <em>le <?php echo $donnees['dates']; ?></em>
+                    </h3>
+                        <p>
+                            <?php
+                            // On affiche le contenu du commentaire
+                            echo nl2br(htmlspecialchars($donnees['text']));
+                            ?>
+
+                        </p>
+                        <a href="indexAdmin.php?action=deleteReport&id=<?= $donnees['id'] ?>">Supprimer</a>
+                    <?php
+                    }
+                    $signalerCommentaire->closeCursor();
+                    ?>
+                </div>
             </div>
         </div>
     </body>

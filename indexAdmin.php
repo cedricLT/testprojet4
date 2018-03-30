@@ -29,8 +29,9 @@ if (isset($_GET['action'])) {
         $idChapter = $_GET['id'];
         $id = $_GET['id'];
         voirCommentaire($idChapter, $id);
-
-
+    }elseif ($_GET['action'] == 'deleteReport'){
+        $idDonnee = $_GET['id'];
+        deleteReport($idDonnee);
     }
 }
 else {

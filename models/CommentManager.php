@@ -53,7 +53,7 @@ class CommentManager extends Manager
     }
 
 
-    public function voirCommentaireAd($idChapter){
+    public function voirCommentaireAd($idChapter){ // commentaires par chapitre sur l admin
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('SELECT id, text, membrePseudo, dates, id_chapitre FROM commentaire WHERE id_chapitre = ? ');
         $req->execute(array($idChapter));
@@ -61,11 +61,26 @@ class CommentManager extends Manager
         return $req;
     }
 
-    public function signalCommentaire($donnee){
+    public function signalCommentaire($donnee){ // commentaire signaler sql
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('UPDATE commentaire SET report=(report+1) WHERE id = ?');
         $req->execute(array($donnee));
 
+        return $req;
+    }
+
+    public function report(){
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('SELECT id, text, membrePseudo, dates FROM commentaire WHERE report>2 ');
+        $req->execute(array());
+
+        return $req;
+    }
+
+    public function suppreCommentSignal($idDonnee){
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('DELETE  FROM commentaire WHERE id = ? ');
+        $req->execute(array($idDonnee));
         return $req;
     }
 }

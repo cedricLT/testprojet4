@@ -36,7 +36,7 @@
 
                 <p>
                     <?php
-                    // On affiche le contenu du billet
+                    // On affiche le contenu du commentaire
                     echo nl2br(htmlspecialchars($donnees['text']));
                     ?>
 
