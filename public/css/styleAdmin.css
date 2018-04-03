@@ -1,38 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-a{
+@font-face {
+    font-family: police1;
+    src: url("../polices/Kaushan.otf");
+}
+
+a {
     text-decoration: none;
     color: black;
 }
 
-.contener{
+body {
+    background: url("../img/glacier.jpg") no-repeat center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+}
+
+.contener {
     display: flex;
     flex-direction: column;
+}
+
+#texte_ifr, #texte_tbl {
+    width: 100% !important;
+}
+
+h3 {
+    color: blue;
 }
 
 /*======================================================*/
 /*==========Chapitres=================================*/
 
-h1{
+h1 {
     text-align: center;
-    margin-bottom: 60px;
-    font-size: 52px;
-    text-decoration: underline;
+    margin-bottom: 24px;
+    font-size: 25px;
+    font-family: police1;
 }
 
-
-h2{
+h2 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 48px;
-    text-decoration: underline;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-family: police1;
+    margin-top: 20px;
 }
 
-#creatChapitres{
-    width: 42%;
+#creatChapitres {
+    width: 49%;
     padding: 20px;
     margin-bottom: 40px;
     margin-top: 50px;
@@ -40,122 +59,282 @@ h2{
 
 }
 
-#blockCommentaires{
-    padding: 26px;
+#blockCommentaires {
+    padding: 10px;
 }
 
-#nouvChap{
-    font-size: 34px;
+#nouvChap {
+    font-size: 14px;
     background-color: darkgray;
     padding: 10px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 2px 2px 10px 2px black;
-    color: gold;
+    color: blue;
 }
 
-#titre{
-    font-size: 45px;
+#titre {
+    font-size: 22px;
     color: darkblue;
+    font-family: police1;
 }
 
-#nouvChap:active{
+#nouvChap:active {
     box-shadow: none;
 }
 
-#liens{
+#liens {
     display: flex;
     flex-direction: column;
-    padding: 26px;
+    padding: 16px;
     font-size: 34px;
-    border: 1px solid;
     margin-bottom: 26px;
+    background-color: snow;
+    opacity: 0.7;
 }
 
-.lien{
+.lien {
     display: flex;
     flex-direction: column;
     margin-top: 32px;
 }
 
-#liens .lien #suppre{
-    width: 18%;
+#liens .lien #suppre {
+    width: 26%;
     margin-bottom: 15px;
     background-color: darkgray;
-    padding: 10px;
+    padding: 7px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 2px 2px 10px 2px black;
     color: red;
+    font-size: 16px;
 }
 
-#liens .lien #suppre:active{
+#liens .lien #suppre:active {
     box-shadow: none;
 }
 
-#liens .lien #modif{
-    width: 17%;
+#liens .lien #modif {
+    width: 27%;
     margin-bottom: 15px;
     background-color: darkgray;
-    padding: 10px;
+    padding: 7px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 2px 2px 10px 2px black;
     color: blue;
+    font-size: 16px;
 }
 
-#liens .lien #modif:active{
+#liens .lien #modif:active {
     box-shadow: none;
 }
 
-#liens .lien #comments{
-    width: 36%;
+#liens .lien #comments {
+    width: 58%;
     background-color: darkgray;
-    padding: 10px;
+    padding: 7px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 2px 2px 10px 2px black;
-    margin-bottom: 15px;
     color: blue;
+    font-size: 16px;
 }
 
-#liens .lien #comments:active{
+#liens .lien #comments:active {
     box-shadow: none;
 }
 
 /*================================================================*/
 /*===================Commentaires signalé========================*/
 
-#signalement{
-    border: 1px solid;
+#signalement {
     padding: 20px;
     margin-bottom: 28px;
+    font-size: 18px;
+    background-color: snow;
+    opacity: 0.7;
 }
 
-#reportComment{
+#reportComment {
     margin-top: 60px;
-    padding: 26px;
+    padding: 10px;
 
 }
 
-#dates{
+#dates {
     margin-bottom: 10px;
     color: blue;
-    text-decoration: underline;
+    font-family: police1;
 }
 
-#pseudo{
+#pseudo {
     margin-bottom: 15px;
     color: blue;
 }
 
-#text{
+#text {
     margin-bottom: 62px;
 }
-#supprime{
+
+#supprime {
     background-color: darkgray;
-    padding: 10px;
+    padding: 5px;
     border-radius: 12px;
     box-shadow: 2px 2px 10px 2px black;
     color: red;
 }
+
+/*=============================================================*/
+/*=====================style éditer un chapitre admin (viewAdmin.php)=============================*/
+
+#titreEditeur {
+    text-align: center;
+    zoom: 142%;
+}
+
+#numeroChapitre {
+    text-align: center;
+    zoom: 142%;
+}
+
+#editeurTinyMce {
+    margin-bottom: 45px;
+
+}
+
+#retourTB {
+    width: 47%;
+    text-align: center;
+    margin: auto;
+    background-color: darkgray;
+    padding: 7px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px 2px black;
+}
+
+#retourTB:active {
+    box-shadow: none;
+}
+
+/*=============================================================*/
+/*=====================style lien voir commentaire du tableau de bord=============================*/
+
+.news {
+    padding: 26px;
+    width: 78%;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: snow;
+    opacity: 0.7;
+}
+
+#commentaire {
+    margin-bottom: 20px;
+}
+
+#suppre {
+    background-color: darkgray;
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px 2px black;
+    color: red;
+}
+
+/*======================================================*/
+/*=================media queries=====================================*/
+@media all and (min-width: 640px) {
+    /*=============tableau de bord Chapitres============*/
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    #blockCommentaires {
+        padding: 25px;
+    }
+
+    #liens .lien #modif {
+        width: 14%;
+    }
+
+    #liens .lien #comments {
+        width: 26%;
+
+    }
+
+    #liens .lien #suppre {
+        width: 14%;
+    }
+
+    /*===================tableau de bord commentaires============================================*/
+    #reportComment {
+        padding: 25px;
+    }
+
+    /*======================================================*/
+    /*============éditer un chapitre admin (viewAdmin.php)========*/
+
+    #retourTB {
+        width: 29%;
+        margin-bottom: 20px;
+    }
+
+}
+
+/*====================================================================*/
+/*====================================================================*/
+
+@media all and (min-width: 1000px) {
+    /*==========tableau de bord chapitre=============*/
+    h1 {
+        font-size: 58px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    #liens .lien #comments {
+        max-width: 18%;
+    }
+
+    #blockCommentaires {
+        padding: 86px;
+    }
+
+    /*=============tableau de bord commentaire signalés==============*/
+    #reportComment {
+        padding: 86px;
+    }
+/*=======================tinyMce========================================*/
+    td{
+        zoom: 1.2;
+    }
+
+    #texte_ifr{
+        height: 350px !important;
+    }
+    /*==================================================================*/
+
+    #retourTB{
+        max-width: 18%;
+    }
+}
+
+@media all and (min-width: 1550px) {
+    body{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #texte_ifr{
+        height: 550px !important;
+    }
+
+}
+
