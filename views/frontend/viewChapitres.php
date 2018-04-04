@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link href="../public/css/style.css" rel="stylesheet" />
-    <title>Chapitre <?= $chapitre['chapter_number'] ?> un billet pour l'alaska</title>
+    <title>Chapitre <?=  htmlspecialchars($chapitre['chapter_number']) ?> un billet pour l'alaska</title>
 </head>
     <body>
-        <h1>Chapitre <?= $chapitre['chapter_number'] ?> </h1>
-        <h2><?= $chapitre['title'] ?></h2>
+    <?php require ('templateMenuUser.php') ?>
+        <h1>Chapitre <?=  $chapitre['chapter_number'] ?> </h1>
+        <h2><?=  $chapitre['title'] ?></h2>
 
-        <p><?= $chapitre['text'] ?> </p>
+        <p><?=  $chapitre['text'] ?> </p>
 
 
 
-    <form action="index.php?action=adComment&id=<?= $chapitre['id'] ?>" method="post">
+    <form action="index.php?action=adComment&id=<?=  htmlspecialchars($chapitre['id']) ?>" method="post">
         <p>
             <label for="pseudo">Pseudo</label> : <input type="text" name="membrePseudo" id="membrePseudo" /><br />
             <label for="message">Commentaire</label> :  <input type="text" name="text" id="message" /><br />

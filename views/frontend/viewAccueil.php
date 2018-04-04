@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>Billet pour l'Alaska</title>
-        <link rel="stylesheet" type="text/css" href="public/css/style.css">
-        <link rel="stylesheet" type="text/css" href="public/css/animate.css">
+        <?php require('templateUser.php'); ?>
+        <title><?= $title ?></title>
+
     </head>
     <body>
         <div class="contener">
@@ -14,14 +13,8 @@
                         <div id="jeanF">
                             <p>Jean Forteroche</p>
                         </div>
-                        <div id="menu1">
-                            <ul>
-                                <li id="menu1Article1"><a href="#chapitreTitre">Chapitres</a></li>
-                                <li id="menu1Présent"><a href="#">présentation</a></li>
-                                <li id="menu1Inscriptionl"><a href="#">Inscription</a></li>
-                                <li id="menu1Connexion1"><a href="#">Connexion</a></li>
-                            </ul>
-                        </div>
+                        <div id="Accueil"></div>
+                       <?php require ('templateMenuUser.php') ?>
 
                         <div id="connexion" class="">
                             <div class="userConnexion">

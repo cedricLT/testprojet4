@@ -22,6 +22,8 @@ $title = 'Administrateur'; ?>
 <meta name="twitter:description" content="Blog, Jean Forteroche, un Billet simple pour l'Alaska">
 
 
+
+
 <script type="text/javascript" src="views/backend/tinymce/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript">
     tinyMCE.init({

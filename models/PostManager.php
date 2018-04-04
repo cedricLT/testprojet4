@@ -7,7 +7,7 @@ class PostManager extends Manager
     public function getChapitres() // Récupération des chapitres
     {
         $bdd = $this->dbConnect();
-        $req = $bdd->query('SELECT id, title, text, chapter_number, dates FROM chapitre ORDER BY ID ');
+        $req = $bdd->query('SELECT id, title, text, chapter_number, dates FROM chapitre ORDER BY chapter_number ');
         $req->execute(array());
         return $req;
 
