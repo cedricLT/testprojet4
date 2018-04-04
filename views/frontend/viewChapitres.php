@@ -6,7 +6,6 @@
     <title>Chapitre <?=  htmlspecialchars($chapitre['chapter_number']) ?> un billet pour l'alaska</title>
 </head>
     <body>
-    <?php require ('templateMenuUser.php') ?>
         <h1>Chapitre <?=  $chapitre['chapter_number'] ?> </h1>
         <h2><?=  $chapitre['title'] ?></h2>
 

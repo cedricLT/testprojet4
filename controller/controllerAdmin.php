@@ -2,6 +2,7 @@
 
 require_once('models/PostManager.php');
 require_once('models/CommentManager.php');
+require_once('models/AdminManager.php');
 
 function tableauBord()
 {
@@ -78,4 +79,27 @@ function deleteReport($idDonnee){ // supprimer un commentaire signaler
     $suppredel = new CommentManager();
     $supprimdelete = $suppredel->suppreCommentSignal($idDonnee);
     header('Location: indexAdmin.php');
+}
+
+function admin($pseudo, $mdp){ //creation mot de pass pour l admin
+    $creationAdmin = new AdminManager();
+    $creatAd = $creationAdmin->creationAdministrateur($pseudo, $mdp);
+    header('Location: indexAdmin.php');
+}
+
+function connexionAdm($pseudo, $mdp){ //recup du mot de pass
+    $connexionAdmin = new AdminManager();
+    $connexAdm = $connexionAdmin->recupMdp($pseudo, $mdp);
+    $resultat = $connexAdm->fetch();
+    $isPasswordCorrect = password_verify($mdp, $resultat['mdp']);
+    var_dump($pseudo, $mdp, $resultat, $isPasswordCorrect);
+    $_SESSION['pseudo'] = $resultat['pseudo']; // transformation des variable recupere en session
+    $_SESSION['mdp'] = $resultat['mdp'];
+    $_SESSION['id'] = $resultat['id'];
+    if ($isPasswordCorrect){
+        header('Location: indexAdmin.php');
+    }else{
+        throw new Exception('vos identifients sont incorrect');
+    }
+
 }
