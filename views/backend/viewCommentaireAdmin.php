@@ -1,3 +1,4 @@
+<!-- page commentaire par chapitre -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,10 +8,13 @@
 
 </head>
     <body>
-        <div id="commentaires">
+        <div class="contener">
+
+            <?php require ('templateDeconnexion.php'); ?>
             <?php  $chapitre = $chapitres ?>
 
             <h2>Commentaire du chapitre <?= $chapitre['chapter_number'] ?> <br /><br /> "<?= $chapitre['title'] ?>"</h2>
+            <br />
 
             <?php while ($donnees = $voirCommentAd->fetch()) { ?>
 

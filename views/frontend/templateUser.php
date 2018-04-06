@@ -21,6 +21,9 @@ $title = "Billet pour l'alaska";
 <meta name="twitter:url" content="">
 <meta name="twitter:description" content="Blog, Jean Forteroche, un Billet simple pour l'Alaska">
 
+<!--*****************Meta pour version mobile****************-->
+<meta name="viewport" content="width=device-width">
+
 <!--******************** style css***************************-->
 
 <link rel="stylesheet" type="text/css" href="public/css/style.css">

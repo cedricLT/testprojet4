@@ -1,4 +1,7 @@
 <!--page tableau de bord admin-->
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,8 +12,9 @@
 </head>
     <body>
         <div class="contener">
-
+            <?php require ('templateDeconnexion.php'); ?>
             <h1>Tableau de bord administrateur</h1>
+
 
             <div id="chapitres">
 

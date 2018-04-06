@@ -13,25 +13,30 @@
                         <div id="jeanF">
                             <p>Jean Forteroche</p>
                         </div>
-                        <div id="Accueil"></div>
-                       <?php require ('templateMenuUser.php') ?>
-
-                        <div id="connexion" class="">
-                            <div class="userConnexion">
-                                <ul>
-                                    <li><input type="text" name="pseudo" /></li>
-                                    <li><input type="password" name="mot_de_passe" /></li>
-                                    <li><input id="subBtn" type="submit" value="Valider" /></li>
-                                    <li><p><a href="inscription.php">Insciption ici</a></p></li>
-                                </ul>
-                            </div>
-                        </div>
+                       <?php require 'templateMenuUser.php' ?>
                     </div>
                     <h1 id="titre1">"Un billet pour l'Alaska"</h1>
                 </div>
             </header>
             <div class="contener2">
-                <h2 id="chapitreTitre">Chapitres</h2>
+                <div id="presentationJf"></div>
+                <h2>Qui suis je ?</h2>
+                <div id="presentationText">
+                    <p>
+                        Jean Forteroche est né en 1966 sur l'île Adak, en Alaska, et y a passé une partie de son enfance avant de s'installer en France avec sa mère et sa sœur.
+                        Il a rédigé son premier roman LES NAUFRAGES lors d'un voyage en mer.
+                        Après avoir parcouru plus de 40 000 milles sur les océans, il échoue lors de sa tentative de tour du monde en solitaire sur un trimaran qu'il a dessiné et construit lui-même.
+                        En 2013, il publie LE DERNIER MILE récit de son propre naufrage dans les Caraïbes lors de son voyage de noces quelques années plus tôt.
+                        Ce livre fait partie de la liste des best-sellers du Figaro. Publié en France en janvier 2010, LES NAUFRAGES remporte immédiatement un immense succès. Il remporte le prix Médicis et s'est vendu à plus de 300 000 exemplaires.
+
+                        Porté par son succès, Jean Forteroche est aujourd'hui traduit en dix-huit langues dans plus de soixante pays. Une adaptation cinématographique par une société de production française est en cours.
+
+                        En 2017, il décide de publier en ligne chapitre par chapitre sur son propre site, son dernier roman BILLET SIMPLE POUR L'ALASKA.
+                    </p>
+                </div>
+            </div>
+            <div class="contener3">
+                <h2 id="chapitreTitre">Chapitres : </h2>
                 <div id="menuChapitre">
                     <ul>
                         <?php
@@ -46,7 +51,8 @@
                 </div>
             </div>
         </div>
-
-        <script src="js/identification.js"></script>
+    <footer>
+        
+    </footer>
     </body>
 </html>

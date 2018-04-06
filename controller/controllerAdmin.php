@@ -92,14 +92,14 @@ function connexionAdm($pseudo, $mdp){ //recup du mot de pass
     $connexAdm = $connexionAdmin->recupMdp($pseudo, $mdp);
     $resultat = $connexAdm->fetch();
     $isPasswordCorrect = password_verify($mdp, $resultat['mdp']);
-    var_dump($pseudo, $mdp, $resultat, $isPasswordCorrect);
     $_SESSION['pseudo'] = $resultat['pseudo']; // transformation des variable recupere en session
     $_SESSION['mdp'] = $resultat['mdp'];
     $_SESSION['id'] = $resultat['id'];
     if ($isPasswordCorrect){
         header('Location: indexAdmin.php');
     }else{
-        throw new Exception('vos identifients sont incorrect');
+        //throw new Exception('vos identifients sont incorrect');
+        require('views/backend/erreur.php');
     }
 
 }

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <title>Title</title>
 </head>
 <body>
-<div class="contener">
+
     <h1 align="center">Connexion Administrateur</h1>
     <div id="inscription">
         <div align="center">
@@ -25,5 +27,7 @@
                     </tr>
                 </table>
             </form>
+        </div>
+    </div>
 </body>
 </html>

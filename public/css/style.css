@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +12,6 @@ ul {
     list-style: none;
 }
 
-body {
-
-}
-
 @font-face {
     font-family: police1;
     src: url("../polices/Kaushan.otf");
@@ -26,154 +23,26 @@ body {
 
 }
 
-/*=============================================================*/
-/*==============footer=========================================*/
+/****************************************************************************************************/
 
 .contener1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url("../img/alaska.jpg") no-repeat center fixed;
+    background: url("../img/alaska.jpg") no-repeat center;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover;
-    height: 948px;
-}
-/*===================================*/
-
-.fixed{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
 }
 
-
-#menu1 {
-    margin-right: 5%;
-    margin-top: 21px;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-name: bounceInRight;
-    animation-name: bounceInRight;
-
+.fixed {
+    margin: auto;
 }
 
-@-webkit-keyframes bounceInRight {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    from {
-        opacity: 0;
-        -webkit-transform: translate3d(3000px, 0, 0);
-        transform: translate3d(3000px, 0, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(-25px, 0, 0);
-        transform: translate3d(-25px, 0, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(10px, 0, 0);
-        transform: translate3d(10px, 0, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(-5px, 0, 0);
-        transform: translate3d(-5px, 0, 0);
-    }
-
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes bounceInRight {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    from {
-        opacity: 0;
-        -webkit-transform: translate3d(3000px, 0, 0);
-        transform: translate3d(3000px, 0, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(-25px, 0, 0);
-        transform: translate3d(-25px, 0, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(10px, 0, 0);
-        transform: translate3d(10px, 0, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(-5px, 0, 0);
-        transform: translate3d(-5px, 0, 0);
-    }
-
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-}
-/*=======================================================================*/
-
-#menu1 ul {
-    display: flex;
-}
-
-#menu1 li {
-    font-size: 30px;
-    padding: 0px 0px 0px 45px;
-}
-
-#menu1 a {
-    color: blanchedalmond;
-    font-family: police1;
-}
-
-#menu1 li:hover {
-    transform: scale(1.30);
-    transition: all 600ms;
-}
-
-#connexion{
-    display: none;
-}
-
-.userConnexion{
-    display: flex;
-    flex-direction: column;
-}
-
-.userConnexion input{
-    padding: 8px;
-}
-
-.userConnexion li{
-    padding: 6px;
-}
-/*==========================================================*/
 #jeanF {
-    font-size: 52px;
+    text-align: center;
+    margin-top: 10px;
     color: blanchedalmond;
-    margin-left: 10%;
+    font-size: 30px;
     font-family: police1;
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
@@ -181,91 +50,40 @@ body {
     animation-name: bounceInLeft;
 }
 
-@-webkit-keyframes bounceInLeft {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(-3000px, 0, 0);
-        transform: translate3d(-3000px, 0, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(25px, 0, 0);
-        transform: translate3d(25px, 0, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(-10px, 0, 0);
-        transform: translate3d(-10px, 0, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(5px, 0, 0);
-        transform: translate3d(5px, 0, 0);
-    }
-
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
+#menu1 ul {
+    display: flex;
 }
 
-@keyframes bounceInLeft {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(-3000px, 0, 0);
-        transform: translate3d(-3000px, 0, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(25px, 0, 0);
-        transform: translate3d(25px, 0, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(-10px, 0, 0);
-        transform: translate3d(-10px, 0, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(5px, 0, 0);
-        transform: translate3d(5px, 0, 0);
-    }
-
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
+#menu1 {
+    margin-top: 25px;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
 }
 
 
-/*===============================================================*/
-/*========================titre=======================================*/
+
+#menu1 a {
+    color: blanchedalmond;
+    font-family: police1;
+}
+
+#menu1 li {
+    padding: 0 0 0 25px;
+}
+
+#menu1 li:hover {
+    transform: scale(1.30);
+    transition: all 600ms;
+}
 
 #titre1 {
     text-align: center;
-    margin-bottom: 500px;
-    font-size: 85px;
     font-family: police1;
+    font-size: 34px;
+    margin-top: 70px;
+    margin-bottom: 145px;
     color: blanchedalmond;
     -webkit-animation-duration: 4s;
     animation-duration: 4s;
@@ -273,120 +91,95 @@ body {
     animation-name: bounceInDown;
 }
 
-@-webkit-keyframes bounceInDown {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
+.contener2 {
+    background-color: #2e3842;
 }
 
-@keyframes bounceInDown {
-    from,
-    60%,
-    75%,
-    90%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
+.contener h2 {
+    color: blanchedalmond;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
-/*=====================================================================*/
-/*========================== contener 2==================================*/
 
-.contener2{
-    background: #272d39;
+#presentationText p {
+    color: blanchedalmond;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 45px;
+}
+
+.contener3 {
+    background-color: #272d39;
+}
+
+#chapitreTitre {
+    font-family: police1;
+}
+
+#menuChapitre ul {
     display: flex;
     flex-direction: column;
-
 }
 
-#chapitreTitre{
-    text-align: center;
+#menuChapitre li{
+    padding: 15px;
+    font-size: 20px;
     font-family: police1;
-    color: blanchedalmond;
-    font-size: 62px;
+    margin: auto;
+
+
 }
 
 #menuChapitre{
     margin-top: 50px;
 }
 
-#menuChapitre ul{
-    display: flex;
-}
-
-#menuChapitre li{
-    padding: 20px;
-    font-size: 25px;
-    font-family: police1;
-    margin: auto;
-
-
-}
 #menuChapitre li a{
     color: blanchedalmond;
 }
 
-/*========================================================*/
-/*============================================================*/
-/*=========================== formulaire inscription====================================*/
+/*=============================================================*/
+/*==============footer=========================================*/
+
+/*===================================*/
+
+/*.fixed{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+}
+/*=======================================================================*/
+
+
+
+
+/*
+
+
+/*==========================================================*/
+
+
+
+
+
+/*===============================================================*/
+/*========================titre=======================================*/
+
+/*=====================================================================*/
+/*========================== contener 2==================================*/
+
+
+/*
+
+
+
+
+
+
+
+
 
 
