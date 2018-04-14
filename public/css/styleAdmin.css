@@ -57,6 +57,8 @@ h2 {
 }
 
 #creatChapitres {
+    display: flex;
+    flex-direction: column;
     width: 49%;
     padding: 20px;
     margin-bottom: 40px;
@@ -67,6 +69,16 @@ h2 {
 
 #blockCommentaires {
     padding: 10px;
+}
+
+#retourAccueil{
+    font-size: 14px;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 10px 2px black;
+    color: blue;
 }
 
 #nouvChap {
@@ -305,6 +317,10 @@ h2 {
         font-size: 45px;
     }
 
+    #titre{
+        font-size: 30px;
+    }
+
     #liens .lien #comments {
         max-width: 18%;
     }
@@ -332,7 +348,7 @@ h2 {
     }
 }
 
-@media all and (min-width: 1550px) {
+@media all and (min-width: 1500px) {
     body{
         margin-left: 10%;
         margin-right: 10%;

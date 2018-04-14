@@ -16,10 +16,10 @@
         <div id="editeur">
             <form name="formulaire" id="formulaire" action="indexAdmin.php?action=adChapter" method="post">
                 <div id="titreEditeur">
-                    <label for="titre">Titre</label> <br /> <input type="text" name="title" id="title" /><br /><br />
+                    <label for="titre">Titre</label> <br /> <input required type="text" name="title" id="title" /><br /><br />
                 </div>
                 <div id="numeroChapitre">
-                    <label for="chapter_number">Numero du chapitre</label> <br /> <input type="text" name="chapter_number" id="chapter_number" /><br /><br />
+                    <label for="chapter_number">Numero du chapitre</label> <br /> <input required type="text" name="chapter_number" id="chapter_number" /><br /><br />
                 </div>
                 <div id="editeurTinyMce">
                     <textarea id="texte" name="text" rows="25" ></textarea>

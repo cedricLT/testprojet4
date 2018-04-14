@@ -5,7 +5,7 @@ require ('views/backend/services.php');
 
 try {
     if (isset($_GET['action'])) {
-        //if (isset($_SESSION['id'])) { // si pas de session id pas de connexion
+
         if ($_GET['action'] == 'connexionAdm') {
             $pseudo = htmlspecialchars($_POST['nom']);
             $mdp = $_POST['pass'];
@@ -35,18 +35,22 @@ try {
             }
         } elseif
         ($_GET['action'] == 'modifier') {
+            isConnect();
             $id = $_GET['id'];
             modifier($id);
         } elseif
-        ($_GET['action'] == 'editeur') { // tinymce editer un nouveau chapitre
+        ($_GET['action'] == 'editeur') {// tinymce editer un nouveau chapitre
+            isConnect();
             editer();
         } elseif
-        ($_GET['action'] == 'nouvelModif') { // modifier un chapitre dejas existant
+        ($_GET['action'] == 'nouvelModif') {// modifier un chapitre dejas existant
+            isConnect();
             $title = htmlspecialchars($_POST['title']);
             $text = $_POST['text'];
             $chapter_number = htmlspecialchars($_POST['chapter_number']);
             $id = $_GET['id'];
             if (!empty($title) && !empty($chapter_number) && !empty($text)) {
+                isConnect();
                 if ($chapter_number > 0) {
                     nouvelModif($title, $text, $chapter_number, $id);
                 } else {
@@ -58,11 +62,13 @@ try {
 
         } elseif
         ($_GET['action'] == 'supprimComment') { // supprimer un commentaire en admin
+            isConnect();
             $idDonnee = $_GET['id'];
             $idChapter = $_GET['idPost'];
             supprimComment($idDonnee, $idChapter);
         } elseif
         ($_GET['action'] == 'voirCommentaire') {
+            isConnect();
             $idChapter = htmlspecialchars($_GET['id']);
             $id = htmlspecialchars($_GET['id']);
             voirCommentaire($idChapter, $id);
@@ -79,8 +85,12 @@ try {
         } elseif ($_GET['action'] == 'deconnexionAdm') {
             session_destroy();
             header('Location: index.php');
+        }elseif ($_GET['action'] == 'accueil'){
+            if (session_start() == true){
+                header('Location: index.php');
+            }
         }
-        //}
+
     } else {
         isConnect();
         tableauBord();

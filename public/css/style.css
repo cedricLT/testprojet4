@@ -1,5 +1,6 @@
 
 * {
+    outline: 0;
     margin: 0;
     padding: 0;
 }
@@ -29,7 +30,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url("../img/alaska.jpg") no-repeat center;
+    background: url("../img/alaska1.jpg") no-repeat center;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover;
 }
@@ -91,8 +92,13 @@ ul {
     animation-name: bounceInDown;
 }
 
+/*********************************************************************/
 .contener2 {
     background-color: #2e3842;
+}
+
+#presentationText{
+    margin-top: 50px;
 }
 
 .contener h2 {
@@ -102,13 +108,36 @@ ul {
     margin-bottom: 25px;
 }
 
-#presentationText p {
-    color: blanchedalmond;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 45px;
+img{
+    width: 140px;
 }
 
+.image.left, .image.right {
+    max-width: 40%;
+}
+.image.left {
+    float: left;
+    margin: 0 2.2em 0 0;
+    top: 0.25em;
+}
+
+.image {
+    border-radius: 3px;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+
+
+#presentationText p {
+    color: blanchedalmond;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 45px;
+    line-height: 140%;
+}
+
+/**************************************************************************************/
 .contener3 {
     background-color: #272d39;
 }
@@ -119,11 +148,12 @@ ul {
 
 #menuChapitre ul {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 #menuChapitre li{
-    padding: 15px;
+    padding: 40px;
     font-size: 20px;
     font-family: police1;
     margin: auto;
@@ -139,47 +169,263 @@ ul {
     color: blanchedalmond;
 }
 
-/*=============================================================*/
-/*==============footer=========================================*/
+/*****************************************************************************/
 
-/*===================================*/
+#piedDePage{
+    background-color: black;
+}
 
-/*.fixed{
+#piedDePage p{
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/*****************************************************************************/
+/************************************************************************/
+
+@media all and (min-width: 780px) {
+
+    /*************contener 1*****************/
+    #jeanF{
+        font-size: 50px;
+    }
+
+    #menu1 li{
+        font-size: 30px;
+        padding: 0 0 0 44px;
+    }
+
+    #titre1{
+        font-size: 60px;
+
+    }
+
+    /************* contener 2 *********************************/
+
+    .contener h2{
+        font-size: 30px;
+    }
+
+    .image.left{
+        margin: 0 0.5em 0 0;
+    }
+
+    #menuChapitre li{
+        padding: 29px;
+
+    }
+}
+
+@media all and (min-width: 1100px){
+
+    /*******************contenere 2****************************/
+
+    .contener h2 {
+        font-size: 35px;
+    }
+
+    #presentationText p{
+        font-size: 20px;
+        width: 80%;
+
+    }
+
+    /*****************contener 3*************************************/
+    #chapitreTitre{
+        font-size: 35px;
+    }
+
+    #menuChapitre li {
+        padding: 40px;
+    }
+}
+
+/************************************************************************************/
+
+
+@media all and (min-width: 1500px){
+
+    .contener1{
+        height: 850px;
+        background: url(../img/alaska1.jpg) no-repeat center fixed;
+    }
+    .fixed {
+        display: flex;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: space-around;
+
+    }
+
+    #titre1{
+        margin-bottom: 318px;
+        font-size: 80px;
+    }
+
+    /****************************************************/
+
+    .contener2 {
+        height: 520px;
+    }
+
+    img{
+        width: 180px;
+    }
+
+    .image.left {
+        padding-right: 110px;
+    }
+
+    /**********************************************************************/
+
+    .contener3{
+        height: 398px;
+    }
+}
+
+@media all and (min-width: 1700px){
+    body{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
+/*****************************************************************************************************************/
+/************************************page de chapitres********************************************************/
+/**************chapitres********************/
+
+.contener2Chapitre{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    background-color: #2e3842;
+}
+
+.contener2Chapitre{
+    padding: 36px;
+}
+
+h1{
+    text-align: center;
+    font-family: police1;
+    color: blanchedalmond;
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+    font-family: police1;
+    color: blanchedalmond;
+    margin-bottom: 50px;
+}
+
+#text p{
+    color: blanchedalmond;
+    line-height: 155%;
+}
+
+/*******************commentaires****************************/
+
+.envoiCom h4{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pseudo{
+    display: flex;
+    flex-direction: column;
+}
+
+#membrePseudo{
+    width: 50%;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+}
+
+#message{
+    width: 60%;
+    height: 25px;
+}
+
+.envoiCom{
+    padding: 20px;
+}
+
+#envoyer{
+    padding: 10px;
+    background-color: #2e3842;
+    color: blanchedalmond;
+    box-shadow: 4px 3px 16px -2px black;
+    border: none;
+}
+
+#envoyer:active{
+    border: none;
+}
+
+.comment{
+    padding: 20px;
+}
+
+.news{
+    background-color: blanchedalmond;
+    padding: 20px;
+}
+
+#signalCom{
+    margin-top: 20px;
+    background-color: darkgrey;
+    width: max-content;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 16px -2px;
+}
+
+#signalCom a{
+    color: black;
+}
+
+#signalCom:active{
+    box-shadow: none;
+}
+
+.retour{
+    margin-top: 35px;
+    background-color: #2e3842;
+    width: max-content;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 3%;
+    box-shadow: 4px 3px 16px -2px;
+}
+
+.retour:active{
+    box-shadow: none;
+}
+
+.retour a{
+    color: blanchedalmond;
+}
+
+@media all and (min-width: 780px) {
+    #membrePseudo{
+        width: 200px;
+    }
+
+    #message{
+        width: 490px;
+    }
+}
+
+/****************************************************************************/
+/****************************page erreur******************************/
+
+.error img{
     width: 100%;
+    height: auto;
 }
-
-}
-/*=======================================================================*/
-
-
-
-
-/*
-
-
-/*==========================================================*/
-
-
-
-
-
-/*===============================================================*/
-/*========================titre=======================================*/
-
-/*=====================================================================*/
-/*========================== contener 2==================================*/
-
-
-/*
-
-
-
-
-
-
-
-
-
-

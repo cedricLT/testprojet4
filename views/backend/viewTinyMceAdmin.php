@@ -17,17 +17,17 @@
 
             <form name="formulaire" id="formulaire" action="indexAdmin.php?action=nouvelModif&id=<?= $modif['id'] ?>" method="post">
                 <div id="titreEditeur">
-                    <label for="titre">Titre</label> :<br /> <input type="text" name="title" id="title" value="<?=  $modif['title'] ?>"/>
+                    <label for="titre">Titre</label> :<br /> <input required type="text" name="title" id="title" value="<?=  $modif['title'] ?>"/>
                 </div>
 
                 <br/><br/>
 
                 <div id="numeroChapitre">
-                    <label for="chapter_number">Numero du chapitre</label> :<br /> <input type="text" name="chapter_number" id="chapter_number" value="<?= $modif['chapter_number'] ?>"/><br/><br/>
+                    <label for="chapter_number">Numero du chapitre</label> :<br /> <input required type="text" name="chapter_number" id="chapter_number" value="<?= $modif['chapter_number'] ?>"/><br/><br/>
                 </div>
 
                 <div id="editeurTinyMce">
-                    <textarea id="texte" name="text" rows="25"><?= $modif['text'] ?></textarea>
+                    <textarea required id="texte" name="text" rows="25"><?= $modif['text'] ?></textarea>
                 </div>
 
             </form>

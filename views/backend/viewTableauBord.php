@@ -21,6 +21,7 @@
                 <h2>Chapitres</h2>
 
                 <div id="creatChapitres">
+                    <a id="retourAccueil" href="indexAdmin.php?action=accueil">voir la page accueil</a>
                     <a id="nouvChap" href="indexAdmin.php?action=editeur">Créer un nouveau chapitres</a>
                 </div>
 
