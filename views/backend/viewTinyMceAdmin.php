@@ -12,7 +12,10 @@
 
             <?php $modif =  $modifChapitre->fetch()
             ?>
-            <?php require ('templateDeconnexion.php'); ?>
+            <div class="navigation">
+                <?php require 'templatePageAcueil.php'; ?>
+                <?php require 'templateDeconnexion.php'; ?>
+            </div>
             <h1>Modification du chapitre :<br /><?= $modif['title'] ?></h1>
 
             <form name="formulaire" id="formulaire" action="indexAdmin.php?action=nouvelModif&id=<?= $modif['id'] ?>" method="post">

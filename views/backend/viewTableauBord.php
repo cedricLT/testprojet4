@@ -12,7 +12,10 @@
 </head>
     <body>
         <div class="contener">
-            <?php require ('templateDeconnexion.php'); ?>
+            <div class="navigation">
+                <?php require 'templatePageAcueil.php'; ?>
+                <?php require 'templateDeconnexion.php'; ?>
+            </div>
             <h1>Tableau de bord administrateur</h1>
 
 
@@ -21,7 +24,7 @@
                 <h2>Chapitres</h2>
 
                 <div id="creatChapitres">
-                    <a id="retourAccueil" href="indexAdmin.php?action=accueil">voir la page accueil</a>
+
                     <a id="nouvChap" href="indexAdmin.php?action=editeur">Créer un nouveau chapitres</a>
                 </div>
 

@@ -11,7 +11,11 @@
 </head>
 <body>
     <div class="contener">
-    <?php require ('templateDeconnexion.php'); ?>
+        <div class="navigation">
+            <?php require 'templatePageAcueil.php'; ?>
+            <?php require 'templateDeconnexion.php'; ?>
+        </div>
+
         <h2>Editer un chapitre</h2>
         <div id="editeur">
             <form name="formulaire" id="formulaire" action="indexAdmin.php?action=adChapter" method="post">

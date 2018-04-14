@@ -11,7 +11,11 @@
     <body>
         <div class="contener">
 
-            <?php require ('templateDeconnexion.php'); ?>
+            <div class="navigation">
+                <?php require 'templatePageAcueil.php'; ?>
+                <?php require 'templateDeconnexion.php'; ?>
+            </div>
+
             <?php  $chapitre = $chapitres ?>
 
             <h2>Commentaire du chapitre <?= $chapitre['chapter_number'] ?> <br /><br /> "<?= $chapitre['title'] ?>"</h2>
