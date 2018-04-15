@@ -139,6 +139,18 @@ h2 {
     margin-top: 32px;
 }
 
+#liens .lien #voirChapter{
+    width: 112px;
+    margin-bottom: 15px;
+    background-color: darkgray;
+    padding: 7px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 10px 2px black;
+    color: blue;
+    font-size: 16px;
+}
+
 #liens .lien #suppre {
     width: 88px;
     margin-bottom: 15px;

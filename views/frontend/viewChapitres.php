@@ -11,6 +11,10 @@
 <body>
     <div class="contenerChapitre">
         <div class="contener2Chapitre">
+            <div class="RetourChapitre">
+                <a href="index.php#chapitreTitre">Retour aux chapitres</a>
+            </div>
+
             <img src="<?= $chapitre['image'] ?>" alt="">
 
             <h1>Chapitre <?=  $chapitre['chapter_number'] ?></h1>
@@ -50,7 +54,7 @@
 
                         </p>
                         <div id="signalCom">
-                            <a  href="index.php?action=signaler&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>">Signaler le commentaire</a>
+                            <a  href="index.php?action=signaler&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>#signalCom">Signaler le commentaire</a>
                         </div>
                     </div>
                 </div>

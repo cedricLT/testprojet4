@@ -305,6 +305,21 @@ img{
     padding: 36px;
 }
 
+.RetourChapitre a{
+    color: black;
+    background-color: blanchedalmond;
+    padding: 5px;
+    box-shadow: 3px 1px 5px -1px blanchedalmond;
+}
+
+.RetourChapitre{
+    margin-top: -25px;
+    margin-bottom: 35px;
+}
+
+.RetourChapitre a:active{
+    box-shadow: none;
+}
 h1{
     text-align: center;
     font-family: police1;

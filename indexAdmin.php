@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('controller/controllerAdmin.php');
-require ('views/backend/services.php');
+require('views/backend/services.php');
 
 try {
     if (isset($_GET['action'])) {
@@ -86,10 +86,15 @@ try {
         } elseif ($_GET['action'] == 'deconnexionAdm') {
             session_destroy();
             header('Location: index.php');
-        }elseif ($_GET['action'] == 'accueil'){
-            if (session_start() == true){
+        } elseif ($_GET['action'] == 'accueil') {
+            if (session_start() == true) {
                 header('Location: index.php');
             }
+        } elseif ($_GET['action'] == 'voirChapter') {
+            isConnect();
+            $id = htmlspecialchars($_GET['id']);
+            post($id);
+
         }
 
     } else {

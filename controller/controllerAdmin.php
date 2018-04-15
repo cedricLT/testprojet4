@@ -102,4 +102,16 @@ function connexionAdm($pseudo, $mdp){ //recup du mot de pass
         require('views/backend/erreur.php');
     }
 
+
+
+}
+
+function post($id){
+    $postManager = new PostManager();
+    $commentManager = new CommentManager();
+
+    $chapitre = $postManager->getChapitre($id);
+    $commentaires = $commentManager->getCommentaire($id);
+    require('views/frontend/viewChapitres.php');
+
 }

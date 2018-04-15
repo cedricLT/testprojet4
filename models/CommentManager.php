@@ -71,7 +71,7 @@ class CommentManager extends Manager
 
     public function report(){
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('SELECT id, text, membrePseudo, dates FROM commentaire WHERE report>2 ');
+        $req = $bdd->prepare('SELECT id, text, membrePseudo, DATE_FORMAT(dates, \'%d/%m/%Y\') AS dates_fr FROM commentaire WHERE report>2 ');
         $req->execute(array());
 
         return $req;

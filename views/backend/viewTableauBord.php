@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="lien">
-
+                            <a id="voirChapter" href="indexAdmin.php?action=voirChapter&id=<?= $chapitre['id'] ?>">Voir le chapitre</a>
                             <a id="modif" href="indexAdmin.php?action=modifier&id=<?= $chapitre['id'] ?>">Modifier</a>
                             <a id="comments" href="indexAdmin.php?action=voirCommentaire&id=<?= $chapitre['id'] ?>">Voir les commentaires</a>
                             <br />
