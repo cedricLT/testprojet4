@@ -18,7 +18,8 @@
             </div>
             <h1>Modification du chapitre :<br /><?= $modif['title'] ?></h1>
 
-            <form name="formulaire" id="formulaire" action="indexAdmin.php?action=nouvelModif&id=<?= $modif['id'] ?>" method="post">
+            <form name="formulaire" id="formulaire" action="indexAdmin.php?action=nouvelModif&id=<?= $modif['id'] ?>" enctype="multipart/form-data" method="post">
+
                 <div id="titreEditeur">
                     <label for="titre">Titre</label> :<br /> <input required type="text" name="title" id="title" value="<?=  $modif['title'] ?>"/>
                 </div>

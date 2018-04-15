@@ -7,7 +7,7 @@ class PostManager extends Manager
     public function getChapitres() // Récupération des chapitres
     {
         $bdd = $this->dbConnect();
-        $req = $bdd->query('SELECT id, title, text, chapter_number, dates FROM chapitre ORDER BY chapter_number ');
+        $req = $bdd->query('SELECT id, title, text, chapter_number, dates, image FROM chapitre ORDER BY chapter_number ');
         $req->execute(array());
         return $req;
 
@@ -16,7 +16,7 @@ class PostManager extends Manager
     public function getChapitre($id)// Récupération d un chapitre
     {
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('SELECT id, title, text, chapter_number, dates FROM chapitre WHERE id = ?');
+        $req = $bdd->prepare('SELECT id, title, text, chapter_number, dates, image FROM chapitre WHERE id = ?');
         $req->execute(array($id));
         return $req->fetch();
     }
@@ -29,10 +29,11 @@ class PostManager extends Manager
         return $req;
     }
 
-    public  function nouveauChapitre($title, $text, $chapteur_number){// enregistre les nouveaux chapitres et les fait apparaitre coder utilisateur et admin
+    public  function nouveauChapitre($title, $text, $chapteur_number, $image){// enregistre les nouveaux chapitres et les fait apparaitre coté utilisateur et admin
+        $image = "public/img/".$image;
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('INSERT INTO chapitre (title, text, chapter_number, dates) VALUES(?,?,?, NOW()) ');
-        $req->execute(array($title, $text, $chapteur_number));
+        $req = $bdd->prepare('INSERT INTO chapitre (title, text, chapter_number, dates, image) VALUES(?,?,?,?, NOW()) ');
+        $req->execute(array($title, $text, $chapteur_number, $image));
         return $req;
     }
 

@@ -30,10 +30,10 @@ function supprimer($idChapitre) // suppression d un chapitres et de tous les com
 
 }
 
-function adChapter($title, $text, $chapteur_number)
+function adChapter($title, $text, $chapteur_number, $image)
 { //création d un nouveau chapitre via tinyMce
     $postChapitre = new postManager();
-    $postChapter = $postChapitre->nouveauChapitre($title, $text, $chapteur_number);
+    $postChapter = $postChapitre->nouveauChapitre($title, $text, $chapteur_number, $image);
     header('Location: indexAdmin.php');
 }
 

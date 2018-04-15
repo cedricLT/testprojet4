@@ -27,7 +27,7 @@
                     <h3>
                         <em>Pseudo : <?= htmlspecialchars($donnees['membrePseudo']); ?></em>
                         <br/>
-                        <em>le <?php echo $donnees['dates']; ?></em>
+                        <em>le <?php echo $donnees['dates_fr']; ?></em>
                     </h3>
                     <br />
                     <p id="commentaire">

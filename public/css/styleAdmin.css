@@ -14,14 +14,15 @@ a {
 }
 
 body {
-    background: url("../img/glacier.jpg") no-repeat center fixed;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
+
 }
 
 .contener {
     display: flex;
     flex-direction: column;
+    background: url("../img/glacier.jpg") no-repeat center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
 }
 
 #texte_ifr, #texte_tbl {
@@ -34,16 +35,44 @@ h3 {
 
 
 
-#jojo{
-    color: #0A246A;
-    background-color: #0A246A;
-}
+
 /*======================================================*/
 /*==========Chapitres=================================*/
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+#retourAccueil{
+    background: darkgray;
+    text-align: center;
+    padding: 7px;
+    margin-top: 10px;
+    margin-left: 1%;
+    border-radius: 9px;
+    box-shadow: 3px 2px 9px -1px black;
+    color: blue;
+}
+
+#deconnexion {
+    background: darkgray;
+    text-align: center;
+    padding: 7px;
+    margin-top: 10px;
+    margin-right: 1%;
+    border-radius: 9px;
+    box-shadow: 3px 2px 9px -1px black;
+    color: red;
+}
+
+#deconnexion:active {
+    box-shadow: none;
+}
 
 h1 {
     text-align: center;
     margin-bottom: 24px;
+    margin-top: 20px;
     font-size: 25px;
     font-family: police1;
 }
@@ -59,7 +88,7 @@ h2 {
 #creatChapitres {
     display: flex;
     flex-direction: column;
-    width: 49%;
+    width: 175px;
     padding: 20px;
     margin-bottom: 40px;
     margin-top: 50px;
@@ -71,15 +100,7 @@ h2 {
     padding: 10px;
 }
 
-#retourAccueil{
-    font-size: 14px;
-    background-color: darkgray;
-    padding: 10px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 2px 2px 10px 2px black;
-    color: blue;
-}
+
 
 #nouvChap {
     font-size: 14px;
@@ -87,13 +108,14 @@ h2 {
     padding: 10px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 2px 2px 10px 2px black;
+    box-shadow: 2px 2px 10px -1px black;
     color: blue;
 }
 
 #titre {
     font-size: 22px;
     color: darkblue;
+    text-align: center;
     font-family: police1;
 }
 
@@ -118,7 +140,7 @@ h2 {
 }
 
 #liens .lien #suppre {
-    width: 26%;
+    width: 88px;
     margin-bottom: 15px;
     background-color: darkgray;
     padding: 7px;
@@ -134,7 +156,7 @@ h2 {
 }
 
 #liens .lien #modif {
-    width: 27%;
+    width: 88px;
     margin-bottom: 15px;
     background-color: darkgray;
     padding: 7px;
@@ -150,7 +172,7 @@ h2 {
 }
 
 #liens .lien #comments {
-    width: 58%;
+    width: 158px;
     background-color: darkgray;
     padding: 7px;
     border-radius: 12px;
@@ -229,7 +251,7 @@ h2 {
     background-color: darkgray;
     padding: 7px;
     border-radius: 12px;
-    box-shadow: 2px 2px 10px 2px black;
+    box-shadow: 2px 2px 10px -1px black;
 }
 
 #retourTB:active {
@@ -274,19 +296,6 @@ h2 {
 
     #blockCommentaires {
         padding: 25px;
-    }
-
-    #liens .lien #modif {
-        width: 14%;
-    }
-
-    #liens .lien #comments {
-        width: 26%;
-
-    }
-
-    #liens .lien #suppre {
-        width: 14%;
     }
 
     /*===================tableau de bord commentaires============================================*/
@@ -360,21 +369,28 @@ h2 {
 
 }
 
-#deconnexion a {
-    color: red;
-}
-
-#deconnexion {
-    background: darkgray;
-    width: 8%;
+/*************************************************************************/
+/*********************page erreur identifiant*/
+.errorID p{
     text-align: center;
-    padding: 5px;
-    margin-top: 10px;
-    margin-left: 1%;
-    border-radius: 9px;
-    box-shadow: 3px 2px 9px black;
+    color: red;
+    font-size: 68px;
 }
 
-#deconnexion:active {
-    box-shadow: none;
+.errorID img{
+    width: 100%;
+    height: auto;
 }
+
+.retourAcceuil{
+    background-color: black;
+    width: 120px;
+    text-align: center;
+    padding: 7px;
+    margin-top: 10px;
+}
+
+.retourAcceuil a{
+    color: white;
+}
+

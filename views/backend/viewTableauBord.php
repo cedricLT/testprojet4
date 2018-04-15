@@ -1,7 +1,4 @@
 <!--page tableau de bord admin-->
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -61,7 +58,7 @@
                     while ($donnees = $signalerCommentaire->fetch()){ ?>
                         <div id="signalement">
 
-                            <p id="dates">Le :  <?php echo $donnees['dates']; ?></p>
+                            <p id="dates">Le :  <?php echo $donnees['dates_fr']; ?></p>
 
                              <p id="pseudo"> Pseudo : <?php echo htmlspecialchars($donnees['membrePseudo']); ?></p>
 

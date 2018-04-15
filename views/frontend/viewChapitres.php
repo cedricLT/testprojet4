@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,6 +11,7 @@
 <body>
     <div class="contenerChapitre">
         <div class="contener2Chapitre">
+            <img src="<?= $chapitre['image'] ?>" alt="">
 
             <h1>Chapitre <?=  $chapitre['chapter_number'] ?></h1>
             <h2><?=  $chapitre['title'] ?></h2>
@@ -37,7 +39,7 @@
                     <div class="news">
                         <h3>
                             <?php echo htmlspecialchars($donnees['membrePseudo']); ?>
-                            <em>le <?php echo $donnees['dates']; ?></em>
+                            <em>le <?php echo $donnees['dates_fr']; ?></em>
                         </h3>
 
                         <p>

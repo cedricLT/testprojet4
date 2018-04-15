@@ -8,7 +8,7 @@ class CommentManager extends Manager
     public function getCommentaires() // recuperation des commentaires
     {
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('SELECT id, text, membrePseudo, dates FROM commentaire ORDER BY ID ');
+        $req = $bdd->prepare('SELECT id, text, membrePseudo, DATE_FORMAT(dates, \'%d/%m/%Y\') AS dates_fr FROM commentaire ORDER BY ID ');
         $req->execute(array());
 
         return $req;
@@ -18,7 +18,7 @@ class CommentManager extends Manager
     public function getCommentaire($id) // recuperation d'un commentaire
     {
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('SELECT id, text, membrePseudo, dates, id_chapitre FROM commentaire WHERE id_chapitre = ? ORDER BY ID DESC LIMIT 0, 10');
+        $req = $bdd->prepare('SELECT id, text, membrePseudo, id_chapitre ,DATE_FORMAT(dates, \'%d/%m/%Y\') AS dates_fr  FROM commentaire WHERE id_chapitre = ? ORDER BY ID DESC LIMIT 0, 10');
         $req->execute(array($id));
 
         return $req;
@@ -55,7 +55,7 @@ class CommentManager extends Manager
 
     public function voirCommentaireAd($idChapter){ // commentaires par chapitre sur l admin
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('SELECT id, text, membrePseudo, dates, id_chapitre FROM commentaire WHERE id_chapitre = ? ');
+        $req = $bdd->prepare('SELECT id, text, membrePseudo, id_chapitre, DATE_FORMAT(dates, \'%d/%m/%Y\') AS dates_fr FROM commentaire WHERE id_chapitre = ? ');
         $req->execute(array($idChapter));
 
         return $req;
