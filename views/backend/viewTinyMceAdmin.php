@@ -3,6 +3,7 @@
 <html lang="fr">
     <head>
         <?php require('templateAdmin.php'); ?>
+
         <title><?= $title ?></title>
 
         <link href=" public/css/styleAdmin.css" rel="stylesheet" />

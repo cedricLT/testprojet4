@@ -1,4 +1,4 @@
-<!--Création d un chapitre-->
+<!--éditer un chapitre-->
 <?php isConnect() ?>
 
 <!DOCTYPE html>
@@ -37,5 +37,7 @@
         </div>
 
     </div>
+
+
 </body>
 </html>
