@@ -340,6 +340,9 @@ h2{
 }
 
 /*******************commentaires****************************/
+.contener3Chapitre{
+    background: url("../img/alaska1.jpg") no-repeat center fixed;
+}
 
 .envoiCom h4{
     margin-top: 15px;

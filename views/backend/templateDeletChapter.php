@@ -8,3 +8,5 @@
 
     </div>
 </div>
+
+<script src="public/js/deletComment.js"></script>

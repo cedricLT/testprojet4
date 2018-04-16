@@ -65,7 +65,6 @@ function supprimComment($idDonnee, $idChapter)//supprimer un commentaire en admi
 
 }
 
-
 function voirCommentaire($idChapter, $id)
 { // commentaires par chapitre
     $voirComment = new CommentManager();

@@ -39,7 +39,7 @@
             while ($donnees = $commentaires->fetch())
             {
                 ?>
-                <div class="comment">
+                <div class="comment"><div id="ancre"></div>
                     <div class="news">
                         <h3>
                             <?php echo htmlspecialchars($donnees['membrePseudo']); ?>
@@ -54,7 +54,8 @@
 
                         </p>
                         <div id="signalCom">
-                            <a  href="index.php?action=signaler&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>#signalCom">Signaler le commentaire</a>
+
+                            <a  href="index.php?action=signaler&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>#ancre">Signaler le commentaire</a>
                         </div>
                     </div>
                 </div>
@@ -62,11 +63,11 @@
             }// Fin de la boucle des billets
             $commentaires->closeCursor();
             ?>
-
+            <div class="retour">
+                <a href="index.php">Retour accueil</a>
+            </div>
          </div>
-        <div class="retour">
-            <a href="index.php">Retour accueil</a>
-        </div>
+
     </div>
     <?php require'templateFooter.php'; ?>
 </body>

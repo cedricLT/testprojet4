@@ -23,7 +23,7 @@
             </div>
 
             <?php  $chapitre = $chapitres ?>
-
+            <div id="ancre"></div>
             <h2>Commentaire du chapitre <?= $chapitre['chapter_number'] ?> <br /><br /> "<?= $chapitre['title'] ?>"</h2>
             <br />
 
@@ -44,7 +44,7 @@
                     </p>
                    <!--<a id="suppre" href="indexAdmin.php?action=supprimComment&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>">Supprimer</a>-->
                     <p class="delete_btn">Supprimer </p>
-                    <?php require 'templateDeletCommet.php'; ?>
+                    <?php require 'templateDeletViewCommentaire.php'; ?>
                 </div>
                 <?php
             }// Fin de la boucle des commentaires
