@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f867a88-c16e-48b1-89a5-a171ebc0a8bc" name="Default" comment="profilview.php">
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/backend/templateDeletCommet.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/backend/templateDeletChapter.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/public/css/styleAdmin.css" afterPath="$PROJECT_DIR$/public/css/styleAdmin.css" />
-      <change beforePath="$PROJECT_DIR$/views/backend/viewAdmin.php" afterPath="$PROJECT_DIR$/views/backend/viewAdmin.php" />
+      <change beforePath="$PROJECT_DIR$/views/backend/templateDeletCommet.php" afterPath="$PROJECT_DIR$/views/backend/templateDeletCommet.php" />
+      <change beforePath="$PROJECT_DIR$/views/backend/viewCommentaireAdmin.php" afterPath="$PROJECT_DIR$/views/backend/viewCommentaireAdmin.php" />
       <change beforePath="$PROJECT_DIR$/views/backend/viewTableauBord.php" afterPath="$PROJECT_DIR$/views/backend/viewTableauBord.php" />
-      <change beforePath="$PROJECT_DIR$/views/backend/viewTinyMceAdmin.php" afterPath="$PROJECT_DIR$/views/backend/viewTinyMceAdmin.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="templateDeletCommet.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="templateDeletCommet.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/backend/templateDeletCommet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="templateDeletChapter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/backend/templateDeletChapter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -31,38 +41,18 @@
       <file leaf-file-name="viewTableauBord.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/backend/viewTableauBord.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexAdmin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indexAdmin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1286">
-              <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styleAdmin.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styleAdmin.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/styleAdmin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="289" column="20" lean-forward="false" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
+            <state relative-caret-position="356">
+              <caret line="285" column="1" lean-forward="true" selection-start-line="285" selection-start-column="1" selection-end-line="285" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -101,6 +91,8 @@
       <find>#retourTB</find>
       <find>#supp</find>
       <find>red</find>
+      <find>p</find>
+      <find>#lien</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pubblic/css/style.css" />
-        <option value="$PROJECT_DIR$/controller.php" />
         <option value="$PROJECT_DIR$/model/model_postComment.php" />
         <option value="$PROJECT_DIR$/viewChapitres1.php" />
         <option value="$PROJECT_DIR$/model/model.php" />
@@ -144,7 +134,6 @@
         <option value="$PROJECT_DIR$/controller/controller.php" />
         <option value="$PROJECT_DIR$/views/frontend/viewAccueil.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/views/backend/viewCommentaireAdmin.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/models/PostManager.php" />
         <option value="$PROJECT_DIR$/controller/controllerAdmin.php" />
@@ -157,8 +146,11 @@
         <option value="$PROJECT_DIR$/views/backend/viewAdmin.php" />
         <option value="$PROJECT_DIR$/public/js/delet.js" />
         <option value="$PROJECT_DIR$/public/js/deletComment.js" />
-        <option value="$PROJECT_DIR$/views/backend/viewTableauBord.php" />
         <option value="$PROJECT_DIR$/views/backend/templateDeletCommet.php" />
+        <option value="$PROJECT_DIR$/views/backend/viewCommentaireAdmin.php" />
+        <option value="$PROJECT_DIR$/views/backend/tinymce/templateDeletChapter.php" />
+        <option value="$PROJECT_DIR$/views/backend/templateDeletChapter.php" />
+        <option value="$PROJECT_DIR$/views/backend/viewTableauBord.php" />
         <option value="$PROJECT_DIR$/public/css/styleAdmin.css" />
       </list>
     </option>
@@ -241,12 +233,6 @@
               <item name="testprojet4" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="testprojet4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testprojet4" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -263,16 +249,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\testprojet4" />
-      <recent name="C:\xampp\htdocs\testprojet4\views\backend" />
-      <recent name="C:\xampp\htdocs\testprojet4\models" />
-      <recent name="C:\xampp\htdocs\testprojet4\model" />
-      <recent name="C:\xampp\htdocs\testprojet4\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\testprojet4\views\frontend" />
       <recent name="C:\xampp\htdocs\testprojet4" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\testprojet4\views\backend" />
+      <recent name="C:\xampp\htdocs\testprojet4" />
+      <recent name="C:\xampp\htdocs\testprojet4\models" />
+      <recent name="C:\xampp\htdocs\testprojet4\model" />
+      <recent name="C:\xampp\htdocs\testprojet4\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -343,12 +329,12 @@
       <workItem from="1523704755593" duration="27689000" />
       <workItem from="1523788593696" duration="25933000" />
       <workItem from="1523824672251" duration="82000" />
-      <workItem from="1523864698142" duration="12024000" />
+      <workItem from="1523864698142" duration="13654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380479000" />
+    <option name="totallyTimeSpent" value="382109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -411,7 +397,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model_postComment.php" />
     <entry file="file://$PROJECT_DIR$/views/viewChapitres1.php" />
     <entry file="file://$PROJECT_DIR$/views/backend/tinymce/tiny_mce/themes/advanced/skins/default/content.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -574,14 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/viewCommentaireAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/PostManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -667,14 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/viewTableauBord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -691,6 +660,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/viewCommentaireAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/deletComment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -699,18 +676,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/styleAdmin.css">
+    <entry file="file://$PROJECT_DIR$/views/backend/templateDeletCommet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="289" column="20" lean-forward="false" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/templateDeletCommet.php">
+    <entry file="file://$PROJECT_DIR$/views/backend/viewTableauBord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/templateDeletChapter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/styleAdmin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="285" column="1" lean-forward="true" selection-start-line="285" selection-start-column="1" selection-end-line="285" selection-end-column="1" />
           <folding />
         </state>
       </provider>

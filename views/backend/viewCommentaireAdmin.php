@@ -5,6 +5,12 @@
 <head>
     <?php require('templateAdmin.php'); ?>
     <title><?= $title ?></title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+
+    </script>
     <link href=" public/css/styleAdmin.css" rel="stylesheet" />
 
 </head>
@@ -36,7 +42,9 @@
                         echo nl2br(htmlspecialchars($donnees['text']));
                         ?>
                     </p>
-                   <a id="suppre" href="indexAdmin.php?action=supprimComment&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>">Supprimer</a>
+                   <!--<a id="suppre" href="indexAdmin.php?action=supprimComment&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>">Supprimer</a>-->
+                    <p class="delete_btn">Supprimer </p>
+                    <?php require 'templateDeletCommet.php'; ?>
                 </div>
                 <?php
             }// Fin de la boucle des commentaires
