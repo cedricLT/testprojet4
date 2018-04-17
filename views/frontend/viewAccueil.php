@@ -48,7 +48,7 @@
                         <?php
                         while ($chapitre = $chapitres->fetch()){
                             ?>
-                            <li><h3><a href="index.php?action=post&id=<?= $chapitre['id'] ?>">Chapitre <?= $chapitre['chapter_number'] ?></h3><?= $chapitre['title'] ?><?= $chapitre['image'] ?></a></li>
+                            <li><h3><a href="index.php?action=post&id=<?= $chapitre['id'] ?>">Chapitre <?= $chapitre['chapter_number'] ?></h3><?= $chapitre['title'] ?></a></li>
                         <?php
                         }
                         $chapitres->closeCursor();

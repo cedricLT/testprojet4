@@ -55,7 +55,7 @@
                         </p>
                         <div id="signalCom">
 
-                            <a  href="index.php?action=signaler&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>#ancre">Signaler le commentaire</a>
+                            <a  href="index.php?action=signaler&id=<?= $donnees['id'] ?>&idPost=<?= $donnees['id_chapitre'] ?>#ancre>Signaler le commentaire</a>
                         </div>
                     </div>
                 </div>

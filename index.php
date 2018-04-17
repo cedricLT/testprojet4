@@ -34,5 +34,5 @@ try {
         listPosts();
     }
 }catch (Exception $e){
-    require ('views/frontend/error.php'); // faire nouvelle vue pour erreur génerique
+    require ('views/frontend/error.php');
 }

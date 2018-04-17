@@ -378,6 +378,7 @@ h2{
     background-color: #2e3842;
     color: blanchedalmond;
     box-shadow: 4px 3px 16px -2px black;
+    cursor: pointer;
     border: none;
 }
 
