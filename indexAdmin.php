@@ -24,10 +24,9 @@ try {
             $title = htmlspecialchars($_POST['title']);
             $text = $_POST['text'];
             $chapter_number = htmlspecialchars($_POST['chapter_number']);
-            $image = $_POST['image'];
             if (!empty($title) && !empty($chapter_number) && !empty($text)) {
                 if ($chapter_number > 0) {
-                    adChapter($title, $text, $chapter_number, $image);
+                    adChapter($title, $text, $chapter_number);
                 } else {
                     throw new Exception('Le numéro de chapitre doit être positif');
                 }

@@ -29,11 +29,10 @@ class PostManager extends Manager
         return $req;
     }
 
-    public  function nouveauChapitre($title, $text, $chapteur_number, $image){// enregistre les nouveaux chapitres et les fait apparaitre coté utilisateur et admin
-        $image = "public/img/".$image;
+    public  function nouveauChapitre($title, $text, $chapteur_number){// enregistre les nouveaux chapitres et les fait apparaitre coté utilisateur et admin
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('INSERT INTO chapitre (title, text, chapter_number, dates, image) VALUES(?,?,?,?, NOW()) ');
-        $req->execute(array($title, $text, $chapteur_number, $image));
+        $req = $bdd->prepare('INSERT INTO chapitre (title, text, chapter_number, dates) VALUES(?,?,?, NOW()) ');
+        $req->execute(array($title, $text, $chapteur_number));
         return $req;
     }
 
