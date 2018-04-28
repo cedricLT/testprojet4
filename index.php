@@ -25,10 +25,12 @@ try {
             else {
                 throw new Exception('tous les champs ne sont pas remplis');
             }
-        } elseif ($_GET['action'] == 'signaler') {
+        } elseif ($_GET['action'] == 'signaler') {//signaler un commentaire
             $donnee = htmlspecialchars($_GET['id']);
             $idChapter = htmlspecialchars($_GET['idPost']);
             signaler($donnee, $idChapter);
+        }else{
+            listPosts();
         }
     } else {
         listPosts();

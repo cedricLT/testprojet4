@@ -36,7 +36,7 @@ class PostManager extends Manager
         return $req;
     }
 
-    public function modifChapter($id){
+    public function modifChapter($id){ //chapitres modifiés
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('SELECT id, title, text, chapter_number FROM chapitre WHERE id = ?');
         $req->execute(array($id));

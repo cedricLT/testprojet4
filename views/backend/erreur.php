@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Erreur identifiant</title>
+    <title>Erreur identifiants</title>
     <link href=" public/css/styleAdmin.css" rel="stylesheet" />
 
 </head>
@@ -10,7 +10,7 @@
         <a href="index.php">Reour Accueil</a>
     </div>
     <div class="errorID">
-        <p>Vos dentifiant sont incorrect !</p>
+        <p>Vos identifiants sont incorrect !</p>
         <img src="public/img/error-code.jpeg" alt="image érreur">
     </div>
     <div class="retourAcceuil">

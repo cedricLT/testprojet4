@@ -362,11 +362,12 @@ h2{
 .message{
     display: flex;
     flex-direction: column;
+
 }
 
 #message{
     width: 60%;
-    height: 25px;
+    height: 150px;
 }
 
 .envoiCom{
@@ -447,3 +448,4 @@ h2{
     width: 100%;
     height: auto;
 }
+

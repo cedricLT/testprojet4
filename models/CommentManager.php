@@ -69,7 +69,7 @@ class CommentManager extends Manager
         return $req;
     }
 
-    public function report(){
+    public function report(){ // commentaire signalé dans lle tableau de bord
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('SELECT id, text, membrePseudo, DATE_FORMAT(dates, \'%d/%m/%Y\') AS dates_fr FROM commentaire WHERE report>2 ');
         $req->execute(array());
@@ -77,7 +77,7 @@ class CommentManager extends Manager
         return $req;
     }
 
-    public function suppreCommentSignal($idDonnee){
+    public function suppreCommentSignal($idDonnee){ //supprimer les commentaire signlé
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('DELETE  FROM commentaire WHERE id = ? ');
         $req->execute(array($idDonnee));

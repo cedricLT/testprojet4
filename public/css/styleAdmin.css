@@ -262,6 +262,7 @@ h2 {
     color: red;
     text-align: center;
     cursor: pointer;
+    margin-top: 30px;
 }
 
 .delete_btn:hover {
@@ -314,15 +315,30 @@ h2 {
 
 #retourTB {
     text-align: center;
-    margin: auto;
     background-color: darkgray;
     padding: 7px;
     border-radius: 12px;
     box-shadow: 2px 2px 10px -1px black;
+    margin-top: 15px;
+    width: 124px;
+    margin-left: 1%;
+}
+
+#retourTB a{
+    color: blue;
+}
+
+#retourTB a:hover{
+    color: blanchedalmond;
 }
 
 #retourTB:active {
     box-shadow: none;
+}
+
+#publication{
+    text-align: center;
+    margin-bottom: 56px;
 }
 
 /*=============================================================*/
@@ -468,3 +484,38 @@ h2 {
     margin-top: 20px;
 }
 
+
+/*********************************************************************************/
+/***************************tinyMce*************************************************/
+.mceLayout{
+    width: 100% !important;
+}
+
+
+.submitBtn{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#envoyer{
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 4px 2px 14px -1px;
+}
+ #envoyer:active{
+     box-shadow: none;
+ }
+
+ /*********************************************************************************/
+/**************************** page erreur  numero chapitre*************************************/
+.contenerErreur{
+
+}
+.erreurImg{
+    text-align: center;
+}
+.erreurText p{
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}

@@ -33,9 +33,12 @@
                     </li>
                     <br/>
                     <li>
-                        <div class="message"><label for="message">Commentaire :</label> <input required type="text"
-                                                                                               name="text"
-                                                                                               id="message"/></div>
+                        <div class="message">
+                            <label for="message">Commentaire :</label>
+                            <textarea required name="text" id="message"></textarea>
+                        </div>
+
+
                     </li>
                     <br/>
 

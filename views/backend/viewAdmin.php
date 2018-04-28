@@ -28,6 +28,9 @@
                 <div id="editeurTinyMce">
                     <textarea id="texte" name="text" rows="25" ></textarea>
                 </div>
+                <div class="submitBtn">
+                <input type="submit" id="envoyer" value="Publier"/>
+                </div>
 
             </form>
         </div>

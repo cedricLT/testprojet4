@@ -6,21 +6,23 @@ require('views/backend/services.php');
 try {
     if (isset($_GET['action'])) {
 
-        if ($_GET['action'] == 'connexionAdm') {
+        if ($_GET['action'] == 'connexionAdm') { //connexion admin
             $pseudo = htmlspecialchars($_POST['nom']);
             $mdp = $_POST['pass'];
             if (isset($pseudo) && isset($mdp)) {
                 connexionAdm($pseudo, $mdp);
             } else {
-                throw new Exception('renseigner vos identifients');
+                throw new Exception('renseigner vos identifiants');
             }
 
         } elseif
         ($_GET['action'] == 'supprimer') {//supprimer chapitre
+            isConnect();
             $idChapitre = $_GET['id'];
             supprimer($idChapitre);
         } elseif
         (($_GET['action'] == 'adChapter')) {// création nouveau chapitre
+            isConnect();
             $title = htmlspecialchars($_POST['title']);
             $text = $_POST['text'];
             $chapter_number = htmlspecialchars($_POST['chapter_number']);
@@ -28,9 +30,11 @@ try {
                 if ($chapter_number > 0) {
                     adChapter($title, $text, $chapter_number);
                 } else {
-                    throw new Exception('Le numéro de chapitre doit être positif');
+                    require 'views/backend/erreurNumChapitre.php';
+                    //throw new Exception('Le numéro de chapitre doit être positif');
                 }
             } else {
+
                 throw new Exception('Tous les champs ne sont pas remplis');
             }
         } elseif
@@ -54,7 +58,8 @@ try {
                 if ($chapter_number > 0) {
                     nouvelModif($title, $text, $chapter_number, $id);
                 } else {
-                    throw new Exception('Le numéro de chapitre doit être positif');
+                    require 'views/backend/erreurNumChapitre.php';
+                    //throw new Exception('Le numéro de chapitre doit être positif');
                 }
             } else {
                 throw new Exception('Tous les champs ne sont pas remplis');
@@ -67,13 +72,13 @@ try {
             $idChapter = $_GET['idPost'];
             supprimComment($idDonnee, $idChapter);
         } elseif
-        ($_GET['action'] == 'voirCommentaire') {
+        ($_GET['action'] == 'voirCommentaire') { //voir les commentaires par chapitre
             isConnect();
             $idChapter = htmlspecialchars($_GET['id']);
             $id = htmlspecialchars($_GET['id']);
             voirCommentaire($idChapter, $id);
         } elseif
-        ($_GET['action'] == 'deleteReport') {
+        ($_GET['action'] == 'deleteReport') { // supprimer les commentaires signalés
             $idDonnee = $_GET['id'];
             deleteReport($idDonnee);
         } elseif
@@ -89,11 +94,15 @@ try {
             if (session_start() == true) {
                 header('Location: index.php');
             }
-        } elseif ($_GET['action'] == 'voirChapter') {
+        } elseif ($_GET['action'] == 'voirChapter') { // voir les chapitres en admin
             isConnect();
             $id = htmlspecialchars($_GET['id']);
-            post($id);
+                post($id);
 
+
+        }else{
+            isConnect();
+            tableauBord();
         }
 
     } else {

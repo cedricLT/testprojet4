@@ -23,7 +23,6 @@ $title = 'Administrateur'; ?>
 
 
 
-
 <script type="text/javascript" src="views/backend/tinymce/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript">
     tinyMCE.init({
@@ -32,7 +31,7 @@ $title = 'Administrateur'; ?>
         // id ou class, des textareas
         elements: "texte,texte2",
         // en mode avancé, cela permet de choisir les plugins
-        theme: "advanced",
+        theme: "simple",
 
 
         // langue

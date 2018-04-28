@@ -60,7 +60,7 @@
             </div>
             <hr/>
             <div id="commentaireSignalé">
-                <h2>Commentaires signalé</h2>
+                <h2>Commentaires signalés</h2>
                 <div id="reportComment">
                     <?php
                     while ($donnees = $signalerCommentaire->fetch()){ ?>
@@ -73,7 +73,6 @@
 
                              <p class="text">Commentaire : <?php echo nl2br(htmlspecialchars($donnees['text']));// On affiche le contenu du commentaire ?></p>
 
-                              <!--<a id="supprime" href="indexAdmin.php?action=deleteReport&id=<?= $donnees['id'] ?>#commentaireSignalé">Supprimer</a>-->
                             <p  class="delete_btn">Supprimer </p>
                             <?php require 'templateDeletCommet.php';?>
                         </div>

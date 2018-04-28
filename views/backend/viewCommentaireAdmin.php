@@ -22,6 +22,10 @@
                 <?php require 'templateDeconnexion.php'; ?>
             </div>
 
+            <div id="retourTB">
+                <a href="indexAdmin.php">Retour au tableau de bord</a>
+            </div>
+
             <?php  $chapitre = $chapitres ?>
             <div id="ancre"></div>
             <h2>Commentaire du chapitre <?= $chapitre['chapter_number'] ?> <br /><br /> "<?= $chapitre['title'] ?>"</h2>
@@ -50,9 +54,7 @@
             }// Fin de la boucle des commentaires
            $voirCommentAd->closeCursor();
             ?>
-            <div id="retourTB">
-                <a href="indexAdmin.php">Retour au tableau de bord</a>
-            </div>
+
         </div>
     </body>
 </html>
